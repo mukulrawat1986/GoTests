@@ -7,14 +7,18 @@ const (
 )
 
 // Hello function returns a greeting
-func Hello(name string) string {
+func Hello(name, language string) string {
 
 	if name == "" {
 		name = "World"
+	}
+
+	if language == "Spanish" {
+		return "Hola, " + name
 	}
 	return englishHelloPrefix + name
 }
 
 func main() {
-	fmt.Println(Hello(""))
+	fmt.Println(Hello("", ""))
 }
